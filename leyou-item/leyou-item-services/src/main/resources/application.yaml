@@ -1,0 +1,19 @@
+server:
+  port: 8880
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 10 #服务拉取时间
+    lease-expiration-duration-in-seconds: 45   #服务断开时间
+spring:
+  application:
+    name: leyou-item
+  datasource:
+    url: jdbc:mysql://localhost:3306/leyou?serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  type-aliases-package: cn.leyou.item.pojo

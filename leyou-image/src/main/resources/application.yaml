@@ -1,0 +1,15 @@
+server:
+  port: 8881
+spring:
+  application:
+    name: leyou-upload
+  servlet:
+    multipart:
+      max-file-size: 2    #指定最大文件大小
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 15   #心跳时间
+    lease-expiration-duration-in-seconds: 45    #剔除时间
